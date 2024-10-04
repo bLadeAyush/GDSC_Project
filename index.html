@@ -12,21 +12,25 @@
   </head>
   <body>
     <div class="loader">
+      <div class="image">
+        <img src="Loading.svg" alt="" />
+      </div>
       <div class="wrapper">
         <span class="dot"></span>
         <span class="dot"></span>
         <span class="dot"></span>
         <span class="dot"></span>
       </div>
+          
     </div>
     <div class="cont">
       <nav class="navbar">
         <h1 class="logo"><img src="Frame 1.svg" alt="GDSC" /></h1>
         <ul class="nav-links">
-          <li class="active"><a href="#">Home</a></li>
-          <li><a href="#">Videos</a></li>
+          <li><a href="#" class="active">Home</a></li>
+          <li><a href="indvid.html">Videos</a></li>
           <li><a href="#">Gallery</a></li>
-          <li><a href="#">Events</a></li>
+          <li><a href="events.html">Events</a></li>
           <li><a class="btn" href="#">Join Us</a></li>
         </ul>
         <div class="toggle_btn"><i class="fas fa-bars"></i></div>
@@ -35,8 +39,11 @@
         <div class="header-content">
           <div class="colored-text">
             <div class="colored-text">
-  <span class="g bold">G</span>oogle <span class="d bold">D</span>eveloper <br><span class="s bold">S</span>tudent <span class="c bold">C</span>lubs
-</div>
+              <span class="g bold">G</span>oogle
+              <span class="d bold">D</span>eveloper <br /><span class="s bold"
+                >S</span
+              >tudent <span class="c bold">C</span>lubs
+            </div>
           </div>
           <div class="line"></div>
           <h3>IIIT KALYANI</h3>
@@ -63,7 +70,7 @@
       </section>
       <section class="events">
         <div class="tittle">
-          <h1>Upcoming Events</h1>
+          <h1>Previous Events</h1>
           <div class="line"></div>
         </div>
         <div class="row">
@@ -99,7 +106,7 @@
       <section class="Contact-Info">
         <div class="contact-section">
           <div class="image-container">
-            <img src="contact.svg" alt="contact us">
+            <img src="contact.svg" alt="contact us" />
           </div>
           <div class="contact-form">
             <h1>Contact Us</h1>
@@ -127,7 +134,13 @@
                 />
               </div>
 
-              <textarea placeholder="Message" required rows="10" cols="85" style="overflow-x:hidden;resize:none;"></textarea>
+              <textarea
+                placeholder="Message"
+                required
+                rows="10"
+                cols="85"
+                style="overflow-x: hidden; resize: none"
+              ></textarea>
 
               <button type="submit" class="send-button">Send</button>
             </form>
@@ -174,13 +187,28 @@
     </div>
 
     <script>
+      const svgImage = document.querySelector(".svg-image");
+      function reloadSVG() {
+        svgImage.src = svgImage.src;
+      }  
+      function delay(ms) {
+        return new Promise((resolve) => setTimeout(resolve, ms));
+      }
+      async function performSteps() {
+        await delay(3000);
+        document.querySelector(".image").style.display = "none";
+        document.querySelector(".wrapper").style.display = "flex";
+        document.querySelector(".wrapper").style.visibility = "visible";
+        await delay(2000);
+        document.querySelector(".wrapper").style.display = "none";
+        document.querySelector(".cont").style.visibility = "visible";
+        document.body.style.overflowY = "auto";
+      }
+
       window.onload = function () {
-        setTimeout(function () {
-          document.querySelector(".wrapper").style.display = "none";
-          document.querySelector(".cont").style.visibility = "visible";
-          document.body.style.overflowY = "auto";
-        }, 3000);
+        performSteps();
       };
+
       const menuBtn = document.querySelector(".toggle_btn");
       const navlinks = document.querySelector(".nav-links");
 
