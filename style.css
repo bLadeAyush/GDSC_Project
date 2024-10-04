@@ -85,7 +85,7 @@ a {
 .colored-text .c { color: green; }
 .bold { font-weight: bold; }
 .active {
-    color: yellow;
+    color: blue;
     font-weight: bold;
 }
 
