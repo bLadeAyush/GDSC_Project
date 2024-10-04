@@ -155,8 +155,11 @@ header {
 }
 @media (max-width: 768px) {
     header {
-        height: auto; /* Allow the header height to adjust based on content */
+        margin-top:100px;
+        height: 100vh; 
         padding: 20px;
+        background-image: linear-gradient(rgba(255, 0, 0, 0.5), rgba(0, 0, 255, 0.5)), 
+        url('bgg-cropped.svg');
     }
 
     .header-content h1 {
