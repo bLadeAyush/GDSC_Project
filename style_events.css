@@ -11,6 +11,75 @@ body {
     height: 100vh;
     scroll-behavior: smooth;
 }
+.wrapper {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  .text {
+    color: #0083fe;
+    display: inline-block;
+    margin-left: 5px;
+  }
+  .text1 {
+      color: #0083fe;
+      display: inline-block;
+      margin-left: 5px;
+      font-family: monospace;
+      white-space: nowrap;
+      overflow: hidden;
+      width:100%;
+      animation:
+        typing 1s steps(15),
+        cursor .4s step-end infinite alternate;
+  }
+  @keyframes cursor{ 
+      50%{ border-color: transparent}
+  }
+  @keyframes typing{
+      from{ width: 0}
+  }
+  
+  .bounceball {
+    position: relative;
+    display: inline-block;
+    height: 37px;
+    width: 15px;
+  }
+  
+  .bounceball:before {
+    position: absolute;
+    content: '';
+    display: block;
+    top: 0;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: green;
+    transform-origin: 50%;
+    animation: bounce 500ms alternate infinite ease;
+  }
+  .cont{
+    visibility: hidden ;
+  }
+  @keyframes bounce {
+    0% {
+      top: 30px;
+      height: 5px;
+      border-radius: 60px 60px 20px 20px;
+      transform: scaleX(2);
+    }
+    35% {
+      height: 15px;
+      border-radius: 50%;
+      transform: scaleX(1);
+    }
+    100% {
+      top: 0;
+    }
+  }
 
 /* NAVBAR */
 
@@ -19,12 +88,13 @@ a {
     color: black;
 }
 .active {
-    color: yellow;
+    color: blue;
     font-weight: bold;
 }
 ul {
     list-style: none;
 }
+
 .navbar {
     position: fixed;
     top: 0;
@@ -39,17 +109,17 @@ ul {
     z-index: 100;
     height: 60px;
 }
-
+.navbar .logo{
+    margin-top: 25px;
+}
 .nav-links {
     display: flex;
     align-items: center;
 }
-
 .nav-links li {
     margin: 0 30px;
     list-style-type: none;
 }
-
 .toggle_btn {
     position: absolute;
     top: 30px;
@@ -59,10 +129,10 @@ ul {
     user-select: none;
 }
 .btn {
-    padding: 8px 15px;
-    background: blue;
-    border-radius: 30px;
-    color: rgb(255, 255, 255);
+  padding: 8px 15px;
+  background: blue;
+  border-radius: 30px;
+  color: rgb(255, 255, 255);
 }
 .events-section{
     margin-top: 6rem;
@@ -194,26 +264,6 @@ p{
     }
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* FOOTER */
 
 .container {
@@ -325,7 +375,7 @@ ul {
 
     .logo {
         position: absolute;
-        top: 30px;
+        top: 15px;
         left: 30px;
     }
 
