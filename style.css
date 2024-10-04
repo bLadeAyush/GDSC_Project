@@ -10,6 +10,18 @@ body {
     overflow: hidden;
     height: 100vh;
 }
+.image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+
+img {
+    max-width: 500px; /* Adjust the size of the SVG */
+    height: auto;
+}
 .loader{
     display: flex;
     align-items: center;
@@ -22,8 +34,9 @@ body {
 }
 
 .wrapper {
-    display: flex;
+    display: none;
     column-gap: 10px;
+    visibility: hidden;
 }
 .dot{
     height: 20px;
@@ -161,9 +174,9 @@ header {
         background-image: 
           linear-gradient(rgba(255, 0, 0, 0.2), rgba(0, 0, 255, 0.5)),
           url('bgg-cropped.svg');
-        background-size: cover;
-        background-position: center; 
-        background-repeat: no-repeat; 
+        background-size: cover; /* Ensures the image covers the header */
+        background-position: center; /* Centers the image */
+        background-repeat: no-repeat; /* Prevents repeating the image */
     }
 
     .header-content h1 {
@@ -422,7 +435,6 @@ textarea {
         margin-bottom: 20px;
       }
 }
-
 @media (max-width: 480px) {
     .contact-form h1 {
         font-size: 2rem;
@@ -440,7 +452,6 @@ textarea {
         font-size: 1rem;
     }
 }
-
 .footer {
     background-color: #24262b;
     padding: 70px 0;
