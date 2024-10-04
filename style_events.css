@@ -58,26 +58,12 @@ ul {
     display: none;
     user-select: none;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.btn {
+    padding: 8px 15px;
+    background: blue;
+    border-radius: 30px;
+    color: rgb(255, 255, 255);
+}
 .events-section{
     margin-top: 6rem;
 }
