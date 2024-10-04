@@ -125,6 +125,8 @@ header {
     
     color: black;
     text-align: center;
+    padding: 20px; 
+    max-width: 90%;
 }
 
 .header-content h1 {
@@ -150,6 +152,27 @@ header {
     background: blue;
     border-radius: 30px;
     color: rgb(255, 255, 255);
+}
+@media (max-width: 768px) {
+    header {
+        height: auto; /* Allow the header height to adjust based on content */
+        padding: 20px;
+    }
+
+    .header-content h1 {
+        font-size: 6vmin;
+    }
+
+    .header-content h3 {
+        font-size: 5vmin;
+        margin-top: 30px;
+        margin-bottom: 20px;
+    }
+
+    .btn {
+        padding: 10px 20px;
+        font-size: 1rem;
+    }
 }
 
 /* Events Section */
