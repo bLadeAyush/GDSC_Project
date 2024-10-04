@@ -155,11 +155,15 @@ header {
 }
 @media (max-width: 768px) {
     header {
-        margin-top:100px;
-        height: 100vh; 
+        margin-top: 100px;
+        height: 100vh;
         padding: 20px;
-        background-image: linear-gradient(rgba(255, 0, 0, 0.2), rgba(0, 0, 255, 0.5)), 
-        url('bgg-cropped.svg');
+        background-image: 
+          linear-gradient(rgba(255, 0, 0, 0.2), rgba(0, 0, 255, 0.5)),
+          url('bgg-cropped.svg');
+        background-size: cover; /* Ensures the image covers the header */
+        background-position: center; /* Centers the image */
+        background-repeat: no-repeat; /* Prevents repeating the image */
     }
 
     .header-content h1 {
@@ -177,6 +181,7 @@ header {
         font-size: 1rem;
     }
 }
+
 
 /* Events Section */
 .events {
