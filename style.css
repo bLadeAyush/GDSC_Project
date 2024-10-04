@@ -161,9 +161,9 @@ header {
         background-image: 
           linear-gradient(rgba(255, 0, 0, 0.2), rgba(0, 0, 255, 0.5)),
           url('bgg-cropped.svg');
-        background-size: cover; /* Ensures the image covers the header */
-        background-position: center; /* Centers the image */
-        background-repeat: no-repeat; /* Prevents repeating the image */
+        background-size: cover;
+        background-position: center; 
+        background-repeat: no-repeat; 
     }
 
     .header-content h1 {
