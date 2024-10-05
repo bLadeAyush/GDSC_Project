@@ -198,20 +198,28 @@ p {
 
 .image-section {
   display: grid;
-  grid-template-columns: repeat(
-    auto-fill,
-    minmax(20rem, 1fr)
-  ); /* responsive grid */
-  gap: 2rem; /* space between the images */
+  grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
+  gap: 2rem;
   margin-top: 2em;
+}
+.content p {
+  font-size: 1.2em;
+  margin-bottom: 30px;
+  line-height: 1.6;
+  color: #2a1616;
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 20px;
+  text-align: center;
 }
 
 .image-section img {
   width: 100%;
   height: auto;
-  border-radius: 10px; /* optional rounded corners */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* shadow effect */
-  transition: transform 0.3s ease; /* hover effect */
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
 }
 
 .image-section img:hover {
