@@ -634,3 +634,13 @@ textarea {
 @media (max-width: 574px) {
     
 }
+/*----scroll bar---*/
+::-webkit-scrollbar{
+  width: 10px;
+}
+::-webkit-scrollbar-track{
+  background: white;
+}
+::-webkit-scrollbar-thumb{
+  background: blue;
+}
