@@ -1,41 +1,128 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Gallery</title>
-    <link rel="stylesheet" href="gallery.css">
-</head>
-<body>
-    <div class="gallery-container">
-        <h1>Gallery</h1>
-        <p>Moments Captured, Stories Told</p>
-        <div class="gallery">
-            <div class="gallery-item">
-                <img src="2.heic" alt="Image 1">
-            </div>
-            <div class="gallery-item">
-                <img src="1.jpg" alt="Image 2">
-            </div>
-            <div class="gallery-item">
-                <img src="3.heic" alt="Image 3">
-            </div>
-            <div class="gallery-item">
-                <img src="4.jpg" alt="Image 4">
-            </div>
-            <div class="gallery-item">
-                <img src="5.jpg" alt="Image 5">
-            </div>
-            <div class="gallery-item">
-                <img src="6.jpg" alt="Image 6">
-            </div>
-            <div class="gallery-item">
-                <img src="7.jpg" alt="Image 7">
-            </div>
-            <div class="gallery-item">
-                <img src="8.webp" alt="Image 8">
-            </div>
-        </div>
+    <link rel="stylesheet" href="gallery.css" />
+    <script
+      src="https://kit.fontawesome.com/8ef245de09.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="loading">
+        <div class="bounceball"></div>
+        <div class="text"><p class="text1">   Loading Images ....</p></div>
+      </div>
     </div>
-</body>
+    <div class="container1">
+      <nav class="navbar">
+        <h1 class="logo"><img src="Frame 1.svg" alt="GDSC" /></h1>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="indvid.html">Videos</a></li>
+          <li><a href="#" class="active">Gallery</a></li>
+          <li><a href="events.html">Events</a></li>
+          <li>
+            <a class="btn" href="https://github.com/GDSC-IIIT-Kalyani"
+              >Join Us</a
+            >
+          </li>
+        </ul>
+        <div class="toggle_btn"><i class="fas fa-bars"></i></div>
+      </nav>
+      <div class="gallery-container">
+        <h1>Visual Chronicles of GDSC’s Journey</h1>
+        <p>
+          Explore the GDSC Gallery! Discover memorable moments from our
+          workshops, hackathons, and events that showcase our commitment to
+          learning and collaboration in the tech community.
+        </p>
+        <div class="gallery">
+          <div class="gallery-item">
+            <img src="2.heic" alt="Image 1" />
+          </div>
+          <div class="gallery-item">
+            <img src="1.jpg" alt="Image 2" />
+          </div>
+          <div class="gallery-item">
+            <img src="3.heic" alt="Image 3" />
+          </div>
+          <div class="gallery-item">
+            <img src="4.jpg" alt="Image 4" />
+          </div>
+          <div class="gallery-item">
+            <img src="5.jpg" alt="Image 5" />
+          </div>
+          <div class="gallery-item">
+            <img src="6.jpg" alt="Image 6" />
+          </div>
+          <div class="gallery-item">
+            <img src="7.jpg" alt="Image 7" />
+          </div>
+          <div class="gallery-item">
+            <img src="8.webp" alt="Image 8" />
+          </div>
+        </div>
+      </div>
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="footer-col">
+              <h4>Quick Links</h4>
+              <ul>
+                <li>
+                  <a
+                    href="https://discord.com/channels/799321288555888683/799321289143484468"
+                    >FAQ</a
+                  >
+                </li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="indvid.html">Videos</a></li>
+                <li><a href="https://gdsc.bio.link/">Contact Us</a></li>
+              </ul>
+            </div>
+            <div class="footer-col">
+              <h4>follow us</h4>
+              <div class="social-links">
+                <a href="https://www.facebook.com/iiitkalyani/" target="_blank"
+                  ><i class="fab fa-facebook-f"></i
+                ></a>
+                <a href="https://twitter.com/gdsciiitkalyani" target="_blank"
+                  ><i class="fab fa-twitter"></i
+                ></a>
+                <a
+                  href="https://www.instagram.com/gdsciiitkalyani/?hl=en"
+                  target="_blank"
+                  ><i class="fab fa-instagram"></i
+                ></a>
+                <a
+                  href="https://www.linkedin.com/company/gdsc-iiit-kalyani/?originalSubdomain=in"
+                  target="_blank"
+                  ><i class="fab fa-linkedin-in"></i
+                ></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <script>
+      window.onload = function () {
+        setTimeout(function () {
+          document.querySelector(".wrapper").style.display = "none";
+          document.querySelector(".container1").style.visibility = "visible";
+          document.body.style.overflowY = "auto";
+        }, 6000);
+      };
+      const menuBtn = document.querySelector(".toggle_btn");
+      const navlinks = document.querySelector(".nav-links");
+
+      menuBtn.addEventListener("click", () => {
+        navlinks.classList.toggle("mobile-menu");
+      });
+    </script>
+  </body>
 </html>
