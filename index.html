@@ -13,7 +13,7 @@
   <body>
     <div class="loader">
       <div class="image">
-        <img src="Loading.svg" alt="Loading" class="responsive-image" />
+        <img src="Phone_loading.svg" alt="Loading" class="responsive-image" />
       </div>
       <div class="wrapper">
         <span class="dot"></span>
@@ -31,7 +31,7 @@
           <li><a href="gallery.html">Gallery</a></li>
           <li><a href="events.html">Events</a></li>
           <li>
-            <a class="btn" href="https://github.com/GDSC-IIIT-Kalyani"
+            <a class="btn" href="https://github.com/GDSC-IIIT-Kalyani" target="_blank"
               >Join Us</a
             >
           </li>
@@ -50,7 +50,7 @@
           </div>
           <div class="line"></div>
           <h3>IIIT KALYANI</h3>
-          <a href="https://github.com/GDSC-IIIT-Kalyani" class="btn">Join Us</a>
+          <a href="https://github.com/GDSC-IIIT-Kalyani" class="btn" target="_blank">Join Us</a>
         </div>
       </header>
       <section class="about-us">
@@ -68,6 +68,7 @@
           <a
             href="https://gdg.community.dev/gdg-on-campus-indian-institute-of-information-technology-kalyani-india/"
             class="btn"
+            target="_blank"
             >Know more</a
           >
         </div>
@@ -90,7 +91,7 @@
               Keploy!.Opportunity to level up your API game, contribute to open
               source, and be part of the global Hacktoberfest celebration! 
             </p>
-            <a href="https://gdg.community.dev/e/mjfugg/" class="btn"
+            <a href="https://gdg.community.dev/e/mjfugg/" class="btn" target="_blank"
               >Learn More</a
             >
           </div>
@@ -106,7 +107,7 @@
               of AI and develop practical skills in using AI tools and
               platforms.
             </p>
-            <a href="https://bit.ly/gen-ai-iiitk " class="btn">Learn More</a>
+            <a href="https://bit.ly/gen-ai-iiitk " class="btn" target="_blank">Learn More</a>
           </div>
         </div>
       </section>
@@ -117,9 +118,9 @@
           </div>
           <div class="contact-form">
             <h1>Contact Us</h1>
-            <p>If you have any queries, feel free to contact us</p>
+            <p>If you have any queries,feel free to contact us</p>
 
-<form action="https://api.web3forms.com/submit" method="POST">
+            <form action="https://api.web3forms.com/submit" method="POST">
               <div class="input-group">
                 <input type="hidden" name="access_key" value="e0c9e9c0-2c3a-4f04-a086-a8fccf56c524">
                 <input
@@ -130,7 +131,7 @@
                   style="margin-right: 2rem"
                 />
                 <input
-                  type="text"
+                  type="number"
                   placeholder="Number"
                   required
                   style="margin-right: 2rem"
@@ -166,13 +167,13 @@
               <ul>
                 <li>
                   <a
-                    href="https://discord.com/channels/799321288555888683/799321289143484468"
+                    href="https://discord.com/channels/799321288555888683/799321289143484468" target="_blank"
                     >FAQ</a
                   >
                 </li>
                 <li><a href="events.html">Events</a></li>
                 <li><a href="indvid.html">Videos</a></li>
-                <li><a href="https://gdsc.bio.link/">Contact Us</a></li>
+                <li><a href="https://gdsc.bio.link/" target="_blank">Contact Us</a></li>
               </ul>
             </div>
             <div class="footer-col">
@@ -182,7 +183,7 @@
                   ><i class="fab fa-facebook-f"></i
                 ></a>
                 <a href="https://twitter.com/gdsciiitkalyani" target="_blank"
-                  ><i class="fab fa-twitter"></i
+                  ><i class="fab fa-x-twitter"></i
                 ></a>
                 <a
                   href="https://www.instagram.com/gdsciiitkalyani/?hl=en"
@@ -208,7 +209,7 @@
       }
       async function performSteps() {
         function reloadSVG() {
-        svgImage.src = svgImage.src;
+          svgImage.src = svgImage.src;
         }
         await delay(2500);
         document.querySelector(".image").style.display = "none";
