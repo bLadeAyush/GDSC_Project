@@ -25,6 +25,7 @@ img {
 .responsive-image {
     width: 100%;
     height: auto; 
+    -ms-high-contrast-adjust: none;
 }
 .responsive-image {
     content: url('Loading.svg'); 
