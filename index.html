@@ -119,12 +119,14 @@
             <h1>Contact Us</h1>
             <p>If you have any queries, feel free to contact us</p>
 
-            <form>
+<form action="https://api.web3forms.com/submit" method="POST">
               <div class="input-group">
+                <input type="hidden" name="access_key" value="e0c9e9c0-2c3a-4f04-a086-a8fccf56c524">
                 <input
                   type="text"
                   placeholder="Name"
                   required
+                  name='first_name'
                   style="margin-right: 2rem"
                 />
                 <input
@@ -137,6 +139,7 @@
                   type="email"
                   placeholder="E-mail"
                   required
+                  name="email"
                   style="margin-right: 2rem"
                 />
               </div>
@@ -146,6 +149,7 @@
                 required
                 rows="10"
                 cols="85"
+                name="message"
                 style="overflow-x: hidden; resize: none"
               ></textarea>
 
