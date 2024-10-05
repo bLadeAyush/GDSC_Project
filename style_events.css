@@ -202,7 +202,7 @@ p {
   gap: 2rem;
   margin-top: 2em;
 }
-.content p {
+.content{
   font-size: 1.2em;
   margin-bottom: 30px;
   line-height: 1.6;
