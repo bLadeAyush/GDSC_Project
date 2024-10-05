@@ -21,7 +21,6 @@
         <span class="dot"></span>
         <span class="dot"></span>
       </div>
-          
     </div>
     <div class="cont">
       <nav class="navbar">
@@ -62,7 +61,7 @@
             Kalyani encourages innovation, teamwork, and leadership to solve
             real-world challenges.
           </p>
-          <a href="https://gdg.community.dev/gdg-on-campus-indian-institute-of-information-technology-kalyani-india/" class="btn">Know more</a>
+          <a href="#" class="btn">Know more</a>
         </div>
         <div class="image-container">
           <img src="img1.svg" alt="img1" />
@@ -186,12 +185,12 @@
     </div>
 
     <script>
-      const svgImage = document.querySelector(".svg-image");
-      function reloadSVG() {
-        svgImage.src = svgImage.src;
-      }  
+      const svgImage = document.querySelector(".svg-image");  
       function delay(ms) {
         return new Promise((resolve) => setTimeout(resolve, ms));
+      }
+      function reloadSVG() {
+        svgImage.src = svgImage.src;
       }
       async function performSteps() {
         await delay(2500);
