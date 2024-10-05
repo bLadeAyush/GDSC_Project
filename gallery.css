@@ -274,6 +274,9 @@ img {
   .footer-col {
     width: 100%;
   }
+  .gallery-container {
+    padding: 10px;
+  }
 }
 
 @media only screen and (max-width: 850px) {
