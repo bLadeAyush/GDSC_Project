@@ -10,9 +10,15 @@ body {
     overflow: hidden;
     height: 100vh;
     scroll-behavior: smooth;
+    font-family: Montserrat;
+}
+.loading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 .wrapper {
-    position: absolute;
+    position: fixed;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -22,18 +28,23 @@ body {
     color: #0083fe;
     display: inline-block;
     margin-left: 5px;
+    display:flex;
+    align-items: center;
+    justify-content: center;
   }
   .text1 {
+    
       color: #0083fe;
       display: inline-block;
-      margin-left: 5px;
+      margin: 10px 0px 0px 5px;
       font-family: monospace;
       white-space: nowrap;
       overflow: hidden;
       width:100%;
       animation:
-        typing 1s steps(15),
+        typing 1s steps(14),
         cursor .4s step-end infinite alternate;
+    font-size: 2rem;
   }
   @keyframes cursor{ 
       50%{ border-color: transparent}
