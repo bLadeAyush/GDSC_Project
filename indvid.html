@@ -30,9 +30,37 @@
         </ul>
         <div class="toggle_btn"><i class="fas fa-bars"></i></div>
       </nav>
-      <section class="videos">
-        <div class="video-grid" id="videoGrid"></div>
-      </section>
+      <div class="video-gallery">
+        <!-- Embed 8-9 YouTube videos from your channel using iframe -->
+        <div class="video">
+          <iframe src="https://www.youtube.com/embed/P-PWfLDBNNY" title="Building Revolutionary App with GitHub | Harshavardhan Bajoria"></iframe>
+        </div>
+        <div class="video">
+          <iframe src="https://www.youtube.com/embed/mJvjk68QKeA" title="Craft your Winning Proposal | Rebase-01 Proposal Writing"></iframe>
+        </div>
+        <div class="video">
+          <iframe src="https://www.youtube.com/embed/DVLodCvqfzM" title="Introduction to AI & ML | Mindful Machines | Iman Kalyan Chakraborty | Tech Talks with GDSC
+          "></iframe>
+        </div>
+        <div class="video">
+          <iframe src="https://www.youtube.com/embed/UjWyAlKDQfg" title="Flutter: Introduction and Setup | Flutter Fusion | Ramit Das | Tech Talks with GDSC"></iframe>
+        </div>
+        <div class="video">
+          <iframe src="https://www.youtube.com/embed/w8ol8W_s4C8" title="Winter Of Code 3.0 Closing Ceremony || GDSC IIIT Kalyani"></iframe>
+        </div>
+        <div class="video">
+          <iframe src="https://www.youtube.com/embed/c9zqHIZTjfk" title="API 101 with Postman | GDSC IIIT Kalyani"></iframe>
+        </div>
+        <div class="video">
+          <iframe src="https://www.youtube.com/embed/P0mfgTS20Xs" title="Winter Of Code 3.0 | Registration Guide | GDSC IIIT Kalyani"></iframe>
+        </div>
+        <div class="video">
+          <iframe src="https://www.youtube.com/embed/E-TUU7vS0Is" title="Winter of Code 3.0 Teaser!"></iframe>
+        </div>
+        <div class="video">
+          <iframe src="https://www.youtube.com/embed/UdSZI9FV8fk" title="Flutter Festival 2022 | Session III by Vijay Shankar | GDSC - IIIT Kalyani"></iframe>
+        </div>
+      </div>
       <footer class="footer">
         <div class="container">
           <div class="row">
@@ -76,7 +104,7 @@
           document.querySelector(".wrapper").style.display = "none";
           document.querySelector(".container1").style.visibility = "visible";
           document.body.style.overflowY = "auto";
-        }, 3000);
+        },);
       };
       const menuBtn = document.querySelector(".toggle_btn");
       const navlinks = document.querySelector(".nav-links");
@@ -84,52 +112,6 @@
       menuBtn.addEventListener("click", () => {
         navlinks.classList.toggle("mobile-menu");
       });
-      const API_KEY = "AIzaSyDwIq_DiLws3wf_V_g2N6dQe_-wBHhYk3o";
-      const CHANNEL_ID = "UCvRPKamvUtnQhij5y1MF11A";
-
-      async function fetchVideos(category = "all") {
-        const videoGrid = document.getElementById("videoGrid");
-        videoGrid.innerHTML = "";
-
-        const url = `https://www.googleapis.com/youtube/v3/search?key=${API_KEY}&channelId=${CHANNEL_ID}&part=snippet,id&order=date&maxResults=10`;
-
-        try {
-          const response = await fetch(url);
-          const data = await response.json();
-
-          const videos = data.items.filter((item) => item.id.videoId);
-          displayVideos(videos, category);
-        } catch (error) {
-          console.error("Failed to fetch videos: ", error);
-        }
-      }
-
-      function displayVideos(videos, category) {
-        const videoGrid = document.getElementById("videoGrid");
-
-        videos.forEach((video) => {
-          if (
-            category === "all" ||
-            video.snippet.title.toLowerCase().includes(category)
-          ) {
-            const videoCard = `
-        <div class="video-card">
-          <iframe src="https://www.youtube.com/embed/${
-            video.id.videoId
-          }" frameborder="0" allowfullscreen></iframe>
-          <div class="video-details">
-            <h3>${video.snippet.title}</h3>
-            <p>${video.snippet.description.substring(0, 100)}...</p>
-            <a href="https://www.youtube.com/watch?v=${
-              video.id.videoId
-            }" target="_blank">Watch on YouTube</a>
-          </div>
-        </div>`;
-            videoGrid.innerHTML += videoCard;
-          }
-        });
-      }
-
       fetchVideos();
     </script>
   </body>
