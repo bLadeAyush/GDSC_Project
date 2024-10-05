@@ -117,7 +117,7 @@
           </div>
           <div class="contact-form">
             <h1>Contact Us</h1>
-            <p>If you have any queries,feel free to contact us</p>
+            <p>If you have any queries, feel free to contact us</p>
 
             <form>
               <div class="input-group">
@@ -202,10 +202,10 @@
       function delay(ms) {
         return new Promise((resolve) => setTimeout(resolve, ms));
       }
-      function reloadSVG() {
-        svgImage.src = svgImage.src;
-      }
       async function performSteps() {
+        function reloadSVG() {
+        svgImage.src = svgImage.src;
+        }
         await delay(2500);
         document.querySelector(".image").style.display = "none";
         document.querySelector(".wrapper").style.display = "flex";
