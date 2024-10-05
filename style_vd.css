@@ -33,7 +33,7 @@ body{
     overflow: hidden;
     width:100%;
     animation:
-      typing 1s steps(15),
+      typing 3s steps(40,end) forwards infinite,
       cursor .4s step-end infinite alternate;
     font-size: 1.8rem;
 }
@@ -41,7 +41,15 @@ body{
     50%{ border-color: transparent}
 }
 @keyframes typing{
-    from{ width: 0}
+  0% {
+    width: 0;
+}
+60% {
+    width: 100%;
+}
+100% {
+    width: 0;
+}
 }
 
 .bounceball {
@@ -126,7 +134,7 @@ ul {
 }
 
 .video {
-  flex: 1 1 calc(33.33% - 40px); /* Responsive 3 columns on desktop */
+  flex: 1 1 calc(33.33% - 40px);
   margin: 10px;
   max-width: 400px;
   margin-top:50px
@@ -224,7 +232,7 @@ ul {
   background-color: #ffffff;
 }
 
-/* Responsive Footer */
+
 @media (max-width: 767px) {
   .footer-col {
       width: 50%;
