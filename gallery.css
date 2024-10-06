@@ -148,20 +148,6 @@ img {
   border-radius: 30px;
   color: rgb(255, 255, 255);
 }
-
-.gallery-container {
-  text-align: center;
-  padding: 40px;
-}
-
-.gallery-container h1 {
-  margin-top: 50px;
-  font-size: 2.5em;
-  margin-bottom: 10px;
-  color: #000000; /* Blue color for the heading */
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2); 
-}
-
 .row {
   display: flex;
   flex-wrap: wrap;
@@ -176,22 +162,86 @@ img {
   margin-right: auto;
   padding: 0 20px;
 }
+.gallery-container {
+  text-align: center;
+  padding: 40px;
+}
+
+.gallery-container h1 {
+  margin-top: 50px;
+  font-size: 2.5em;
+  margin-bottom: 10px;
+  color: #000000; 
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2); 
+}
 .gallery {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
   gap: 2rem;
+  margin-bottom: 2rem;
 }
 
 .gallery-item img {
   width: 100%;
   height: auto;
-  border-radius: 10px; /* optional rounded corners */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* shadow effect */
-  transition: transform 0.3s ease; /* hover effect */
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+  transition: transform 0.3s ease; 
 }
 
 .gallery-item:hover img {
   transform: scale(1.05);
+}
+
+@media (min-width: 1354px) {
+  .gallery {
+    width: 100%;
+    height: 66vh;
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    gap: 1.25rem;
+    transition: all 400ms;
+    margin-top:5rem
+  }
+  
+  .gallery-item {
+    flex: 1;
+    overflow: hidden; 
+    transition: all 400ms;
+    cursor: pointer;
+  }
+  
+  .gallery-item img {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    border: 5px solid black; 
+    border-radius: 10px; 
+    width: 100%;
+    height: 100%;
+    object-fit:cover;
+    transition: transform 400ms; 
+  }
+  
+  .gallery-item:nth-child(odd){
+      translate: 0 -2vh;
+  }
+  
+  .gallery-item:nth-child(even){
+      translate: 0 2vh;
+  }
+  
+  .gallery-item:hover {
+      flex: 3;
+  }
+  
+  .gallery-item:hover img {
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.6); 
+      transform: scale(1);
+  }
+  .gallery-container{
+    margin-bottom: 5rem;
+  }
+  
 }
 
 .footer {
