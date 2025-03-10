@@ -14,7 +14,7 @@
     <div class="wrapper">
       <div class="loading">
         <div class="bounceball"></div>
-        <div class="text"><p class="text1">   Loading Images....</p></div>
+        <div class="text"><p class="text1">Loading Images....</p></div>
       </div>
     </div>
     <div class="container1">
@@ -26,7 +26,10 @@
           <li><a href="#" class="active">Gallery</a></li>
           <li><a href="events.html">Events</a></li>
           <li>
-            <a class="btn" href="https://github.com/GDSC-IIIT-Kalyani" target="_blank"
+            <a
+              class="btn"
+              href="https://github.com/GDSC-IIIT-Kalyani"
+              target="_blank"
               >Join Us</a
             >
           </li>
@@ -42,53 +45,53 @@
         </p>
         <div class="gallery">
           <div class="gallery-item">
-            <img src="11.jpg" alt="Image 5" />
+            <img src="images/11.jpg" alt="Image 5" />
           </div>
           <div class="gallery-item">
-            <img src="12.jpeg" alt="Image 6" />
+            <img src="images/12.jpeg" alt="Image 6" />
           </div>
           <div class="gallery-item">
-            <img src="13.heic" alt="Image 7" />
+            <img src="images/13.heic" alt="Image 7" />
           </div>
           <div class="gallery-item">
-            <img src="14.webp" alt="Image 8" />
+            <img src="images/14.webp" alt="Image 8" />
           </div>
           <div class="gallery-item">
-            <img src="9.jpg" alt="Image 4" />
-          </div>
-        </div>
-        <div class="gallery">
-          <div class="gallery-item">
-            <img src="2.heic" alt="Image 1" />
-          </div>
-          <div class="gallery-item">
-            <img src="1.jpg" alt="Image 2" />
-          </div>
-          <div class="gallery-item">
-            <img src="3.heic" alt="Image 3" />
-          </div>
-          <div class="gallery-item">
-            <img src="4.jpg" alt="Image 4" />
-          </div>
-          <div class="gallery-item">
-            <img src="5.jpg" alt="Image 4" />
+            <img src="images/9.jpg" alt="Image 4" />
           </div>
         </div>
         <div class="gallery">
           <div class="gallery-item">
-            <img src="6.jpg" alt="Image 5" />
+            <img src="images/2.heic" alt="Image 1" />
           </div>
           <div class="gallery-item">
-            <img src="17.heic" alt="Image 6" />
+            <img src="images/1.jpg" alt="Image 2" />
           </div>
           <div class="gallery-item">
-            <img src="16.heic" alt="Image 7" />
+            <img src="images/3.heic" alt="Image 3" />
           </div>
           <div class="gallery-item">
-            <img src="8.webp" alt="Image 8" />
+            <img src="images/4.jpg" alt="Image 4" />
           </div>
           <div class="gallery-item">
-            <img src="10.jpg" alt="Image 4" />
+            <img src="images/5.jpg" alt="Image 4" />
+          </div>
+        </div>
+        <div class="gallery">
+          <div class="gallery-item">
+            <img src="images/6.jpg" alt="Image 5" />
+          </div>
+          <div class="gallery-item">
+            <img src="images/17.heic" alt="Image 6" />
+          </div>
+          <div class="gallery-item">
+            <img src="images/16.heic" alt="Image 7" />
+          </div>
+          <div class="gallery-item">
+            <img src="images/8.webp" alt="Image 8" />
+          </div>
+          <div class="gallery-item">
+            <img src="images/10.jpg" alt="Image 4" />
           </div>
         </div>
       </div>
@@ -100,13 +103,18 @@
               <ul>
                 <li>
                   <a
-                    href="https://discord.com/channels/799321288555888683/799321289143484468" target="_blank"
+                    href="https://discord.com/channels/799321288555888683/799321289143484468"
+                    target="_blank"
                     >FAQ</a
                   >
                 </li>
                 <li><a href="events.html">Events</a></li>
                 <li><a href="indvid.html">Videos</a></li>
-                <li><a href="https://gdsc.bio.link/" target="_blank">Contact Us</a></li>
+                <li>
+                  <a href="https://gdsc.bio.link/" target="_blank"
+                    >Contact Us</a
+                  >
+                </li>
               </ul>
             </div>
             <div class="footer-col">
@@ -136,11 +144,9 @@
     </div>
     <script>
       window.onload = function () {
-        setTimeout(function () {
-          document.querySelector(".wrapper").style.display = "none";
-          document.querySelector(".container1").style.visibility = "visible";
-          document.body.style.overflowY = "auto";
-        }, 4560);
+        document.querySelector(".wrapper").style.display = "none";
+        document.querySelector(".container1").style.visibility = "visible";
+        document.body.style.overflowY = "auto";
       };
       const menuBtn = document.querySelector(".toggle_btn");
       const navlinks = document.querySelector(".nav-links");
