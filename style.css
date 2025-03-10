@@ -23,17 +23,17 @@ img {
   height: auto;
 }
 .responsive-image {
-    width: 100%;
-    height: auto; 
-    pointer-events: none;
+  width: 100%;
+  height: auto;
+  pointer-events: none;
 }
 .responsive-image {
-    content: url('Loading.svg'); 
+  content: url("images/Loading.svg");
 }
 @media (max-width: 420px) {
-    .responsive-image {
-        content: url('Phone_loading.svg');
-    }
+  .responsive-image {
+    content: url("images/Phone_loading.svg");
+  }
 }
 .loader {
   display: flex;
@@ -154,7 +154,7 @@ header {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-image: url("bgg.svg");
+  background-image: url("images/bgg.svg");
   background-size: 100vw 100vh;
   background-repeat: no-repeat;
 }
@@ -199,7 +199,7 @@ header {
         rgba(255, 0, 0, 0.2),
         rgba(0, 0, 255, 0.5)
       ),
-      url("bgg-cropped.svg");
+      url("images/bgg-cropped.svg");
     background-size: cover; /* Ensures the image covers the header */
     background-position: center; /* Centers the image */
     background-repeat: no-repeat; /* Prevents repeating the image */
@@ -633,15 +633,14 @@ textarea {
 }
 
 @media (max-width: 574px) {
-    
 }
 /*----scroll bar---*/
-::-webkit-scrollbar{
+::-webkit-scrollbar {
   width: 10px;
 }
-::-webkit-scrollbar-track{
+::-webkit-scrollbar-track {
   background: white;
 }
-::-webkit-scrollbar-thumb{
+::-webkit-scrollbar-thumb {
   background: blue;
 }
