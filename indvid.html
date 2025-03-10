@@ -1,15 +1,14 @@
-<!-- videos.html -->
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>GDSC Video Gallery</title>
-    <link rel="stylesheet" href="style_vd.css" />
+    <title>Videos</title>
+    <link rel="stylesheet" href="style_vd.css" media="all" />
     <script
       src="https://kit.fontawesome.com/8ef245de09.js"
       crossorigin="anonymous"
-      defer
+      async
     ></script>
   </head>
   <body>
@@ -19,10 +18,11 @@
         <div class="text"><p class="text1">Loading Videos....</p></div>
       </div>
     </div>
-
-    <div class="container1" style="visibility: hidden">
+    <div class="container1">
       <nav class="navbar">
-        <h1 class="logo"><img src="images/Frame 1.svg" alt="GDSC" /></h1>
+        <h1 class="logo">
+          <img src="images/Frame 1.svg" alt="GDSC" loading="lazy" />
+        </h1>
         <ul class="nav-links">
           <li><a href="index.html">Home</a></li>
           <li><a href="#" class="active">Videos</a></li>
@@ -39,70 +39,28 @@
         </ul>
         <div class="toggle_btn"><i class="fas fa-bars"></i></div>
       </nav>
-
       <div class="video-gallery">
         <h1>GDSC Journey: Videos That Inspire</h1>
         <p>
           Explore our Video Gallery, featuring highlights from workshops and
-          events at GDSC. Discover insights and moments that showcase our
-          commitment to learning and collaboration in the tech community!
+          events at GDSC.
         </p>
-
         <div class="video">
-          <img
-            class="video-thumbnail"
-            data-src="https://img.youtube.com/vi/P-PWfLDBNNY/maxresdefault.jpg"
-            data-video="https://www.youtube.com/embed/P-PWfLDBNNY"
-            alt="Building Revolutionary App with GitHub"
-          />
+          <iframe
+            loading="lazy"
+            src="https://www.youtube.com/embed/P-PWfLDBNNY"
+            title="Building Revolutionary App with GitHub"
+          ></iframe>
         </div>
-
         <div class="video">
-          <img
-            class="video-thumbnail"
-            data-src="https://img.youtube.com/vi/mJvjk68QKeA/maxresdefault.jpg"
-            data-video="https://www.youtube.com/embed/mJvjk68QKeA"
-            alt="Craft your Winning Proposal"
-          />
+          <iframe
+            loading="lazy"
+            src="https://www.youtube.com/embed/mJvjk68QKeA"
+            title="Craft your Winning Proposal"
+          ></iframe>
         </div>
-
-        <div class="video">
-          <img
-            class="video-thumbnail"
-            data-src="https://img.youtube.com/vi/DVLodCvqfzM/maxresdefault.jpg"
-            data-video="https://www.youtube.com/embed/DVLodCvqfzM"
-            alt="Introduction to AI & ML"
-          />
-        </div>
-
-        <div class="video">
-          <img
-            class="video-thumbnail"
-            data-src="https://img.youtube.com/vi/UjWyAlKDQfg/maxresdefault.jpg"
-            data-video="https://www.youtube.com/embed/UjWyAlKDQfg"
-            alt="Flutter: Introduction and Setup"
-          />
-        </div>
-
-        <div class="video">
-          <img
-            class="video-thumbnail"
-            data-src="https://img.youtube.com/vi/w8ol8W_s4C8/maxresdefault.jpg"
-            data-video="https://www.youtube.com/embed/w8ol8W_s4C8"
-            alt="Winter Of Code 3.0 Closing Ceremony"
-          />
-        </div>
-
-        <div class="video">
-          <img
-            class="video-thumbnail"
-            data-src="https://img.youtube.com/vi/c9zqHIZTjfk/maxresdefault.jpg"
-            data-video="https://www.youtube.com/embed/c9zqHIZTjfk"
-            alt="API 101 with Postman"
-          />
-        </div>
+        <!-- Add similar lazy loading for other videos -->
       </div>
-
       <footer class="footer">
         <div class="container">
           <div class="row">
@@ -149,43 +107,15 @@
         </div>
       </footer>
     </div>
-
     <script>
-      window.onload = function () {
-        setTimeout(function () {
-          document.querySelector(".wrapper").style.display = "none";
-          document.querySelector(".container1").style.visibility = "visible";
-          document.body.style.overflowY = "auto";
-        }, 1000); // Adds a 1-second delay before showing content
-      };
-
-      // Lazy Loading for YouTube Videos
-      document.addEventListener("DOMContentLoaded", function () {
-        const thumbnails = document.querySelectorAll(".video-thumbnail");
-
-        thumbnails.forEach((thumb) => {
-          thumb.src = thumb.getAttribute("data-src"); // Load thumbnail image
-
-          thumb.addEventListener("click", function () {
-            const videoSrc = thumb.getAttribute("data-video");
-            const iframe = document.createElement("iframe");
-            iframe.src = videoSrc + "?autoplay=1";
-            iframe.allow =
-              "accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture";
-            iframe.allowFullscreen = true;
-            iframe.width = "100%";
-            iframe.height = "315";
-
-            // Replace the thumbnail with the video
-            thumb.parentNode.replaceChild(iframe, thumb);
-          });
-        });
+      window.addEventListener("load", function () {
+        document.querySelector(".wrapper").style.display = "none";
+        document.querySelector(".container1").style.visibility = "visible";
+        document.body.style.overflowY = "auto";
       });
 
-      // Mobile Menu Toggle
       const menuBtn = document.querySelector(".toggle_btn");
       const navlinks = document.querySelector(".nav-links");
-
       menuBtn.addEventListener("click", () => {
         navlinks.classList.toggle("mobile-menu");
       });
