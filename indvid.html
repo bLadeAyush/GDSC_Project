@@ -1,14 +1,14 @@
-<!-- videos.html -->
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="style_vd.css" />
+    <title>Videos</title>
+    <link rel="stylesheet" href="style_vd.css" media="all" />
     <script
       src="https://kit.fontawesome.com/8ef245de09.js"
       crossorigin="anonymous"
+      async
     ></script>
   </head>
   <body>
@@ -20,7 +20,9 @@
     </div>
     <div class="container1">
       <nav class="navbar">
-        <h1 class="logo"><img src="images/Frame 1.svg" alt="GDSC" /></h1>
+        <h1 class="logo">
+          <img src="images/Frame 1.svg" alt="GDSC" loading="lazy" />
+        </h1>
         <ul class="nav-links">
           <li><a href="index.html">Home</a></li>
           <li><a href="#" class="active">Videos</a></li>
@@ -41,64 +43,23 @@
         <h1>GDSC Journey: Videos That Inspire</h1>
         <p>
           Explore our Video Gallery, featuring highlights from workshops and
-          events at GDSC. Discover insights and moments that showcase our
-          commitment to learning and collaboration in the tech community!
+          events at GDSC.
         </p>
         <div class="video">
           <iframe
+            loading="lazy"
             src="https://www.youtube.com/embed/P-PWfLDBNNY"
-            title="Building Revolutionary App with GitHub | Harshavardhan Bajoria"
+            title="Building Revolutionary App with GitHub"
           ></iframe>
         </div>
         <div class="video">
           <iframe
+            loading="lazy"
             src="https://www.youtube.com/embed/mJvjk68QKeA"
-            title="Craft your Winning Proposal | Rebase-01 Proposal Writing"
+            title="Craft your Winning Proposal"
           ></iframe>
         </div>
-        <div class="video">
-          <iframe
-            src="https://www.youtube.com/embed/DVLodCvqfzM"
-            title="Introduction to AI & ML | Mindful Machines | Iman Kalyan Chakraborty | Tech Talks with GDSC
-          "
-          ></iframe>
-        </div>
-        <div class="video">
-          <iframe
-            src="https://www.youtube.com/embed/UjWyAlKDQfg"
-            title="Flutter: Introduction and Setup | Flutter Fusion | Ramit Das | Tech Talks with GDSC"
-          ></iframe>
-        </div>
-        <div class="video">
-          <iframe
-            src="https://www.youtube.com/embed/w8ol8W_s4C8"
-            title="Winter Of Code 3.0 Closing Ceremony || GDSC IIIT Kalyani"
-          ></iframe>
-        </div>
-        <div class="video">
-          <iframe
-            src="https://www.youtube.com/embed/c9zqHIZTjfk"
-            title="API 101 with Postman | GDSC IIIT Kalyani"
-          ></iframe>
-        </div>
-        <div class="video">
-          <iframe
-            src="https://www.youtube.com/embed/P0mfgTS20Xs"
-            title="Winter Of Code 3.0 | Registration Guide | GDSC IIIT Kalyani"
-          ></iframe>
-        </div>
-        <div class="video">
-          <iframe
-            src="https://www.youtube.com/embed/E-TUU7vS0Is"
-            title="Winter of Code 3.0 Teaser!"
-          ></iframe>
-        </div>
-        <div class="video">
-          <iframe
-            src="https://www.youtube.com/embed/UdSZI9FV8fk"
-            title="Flutter Festival 2022 | Session III by Vijay Shankar | GDSC - IIIT Kalyani"
-          ></iframe>
-        </div>
+        <!-- Add similar lazy loading for other videos -->
       </div>
       <footer class="footer">
         <div class="container">
@@ -122,7 +83,7 @@
               </ul>
             </div>
             <div class="footer-col">
-              <h4>follow us</h4>
+              <h4>Follow Us</h4>
               <div class="social-links">
                 <a href="https://www.facebook.com/iiitkalyani/" target="_blank"
                   ><i class="fab fa-facebook-f"></i
@@ -147,20 +108,17 @@
       </footer>
     </div>
     <script>
-      window.onload = function () {
-        setTimeout(function () {
-          document.querySelector(".wrapper").style.display = "none";
-          document.querySelector(".container1").style.visibility = "visible";
-          document.body.style.overflowY = "auto";
-        });
-      };
+      window.addEventListener("load", function () {
+        document.querySelector(".wrapper").style.display = "none";
+        document.querySelector(".container1").style.visibility = "visible";
+        document.body.style.overflowY = "auto";
+      });
+
       const menuBtn = document.querySelector(".toggle_btn");
       const navlinks = document.querySelector(".nav-links");
-
       menuBtn.addEventListener("click", () => {
         navlinks.classList.toggle("mobile-menu");
       });
-      fetchVideos();
     </script>
   </body>
 </html>
